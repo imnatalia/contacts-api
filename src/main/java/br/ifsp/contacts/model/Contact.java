@@ -21,8 +21,7 @@ public class Contact {
     @Email(message = "O email deve ser válido")
     private String email;
 
-    @Min(value = 8, message = "O telefone deve ter no mínimo 8 dígitos")
-    @Size(max = 15, message = "O telefone deve ter no máximo 15 dígitos")
+    @Size(min = 8, max = 15, message = "O telefone deve ter entre 8 e 15 dígitos")
     private String telefone;
 
     @JsonManagedReference
