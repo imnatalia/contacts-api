@@ -22,7 +22,7 @@ public class Contact {
     private String email;
 
     @Min(value = 8, message = "O telefone deve ter no mínimo 8 dígitos")
-    @Max(value = 15, message = "O telefone deve ter no máximo 15 dígitos")
+    @Size(max = 15, message = "O telefone deve ter no máximo 15 dígitos")
     private String telefone;
 
     @JsonManagedReference
