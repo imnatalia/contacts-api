@@ -14,8 +14,8 @@ public class AddressController {
     private AddressRepository addressRepository;
 
     @GetMapping
-    public List<Address> getAddressesByContactId(@PathVariable Long contactId) {
-        return addressRepository.findByContactIdContact(contactId);
+    public List<Address> getAddressesByContactId(@PathVariable Long id) {
+        return addressRepository.findByContactIdContact(id);
     }
 
 }

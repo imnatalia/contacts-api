@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "address")
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,7 +15,7 @@ public class Address {
     private String cep;
 
     @ManyToOne
-    @JoinColumn(name = "contact_idContact")
+    @JoinColumn(name = "contact_id_contact")
     @JsonBackReference
     private Contact contact;
 

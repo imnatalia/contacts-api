@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name = "contact")
 public class Contact {
     
     @Id
@@ -35,6 +36,13 @@ public class Contact {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
+    }
+    
+    public Contact(String nome, String email, String telefone, List<Address> addresses) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.addresses = addresses;
     }
 
     public Contact(String nome, String email) {
